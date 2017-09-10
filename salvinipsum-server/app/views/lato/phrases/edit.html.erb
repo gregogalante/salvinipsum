@@ -1,0 +1,35 @@
+<%
+# Dichiaro blocco
+block = view(:block).new
+
+# Dichiaro actionbar
+actionbar_edit = view(:actionbar).new(title: "Modifica frase")
+actionbar_group = view(:actionbar).new(title: "Appartenenza della frase a paragrafo / post")
+
+%>
+
+
+
+<%=raw actionbar_edit %>
+
+<div class="content-row">
+  <%=raw block.open %>
+
+    <%= render 'lato/phrases/shared/form', method: :put %>
+
+    <%= link_to 'Elimina', lato_phrase_path(@phrase), method: :delete, style: 'display: block; text-align: right;' %>
+
+  <%=raw block.close %>
+
+  <% if @phrase.paragraph %>
+
+    <%=raw actionbar_group %>
+
+    <%=raw block.open %>
+
+      <%=raw @phrase.paragraph.content_underline(@phrase) %>
+
+    <%=raw block.close %>
+
+  <% end %>
+</div>

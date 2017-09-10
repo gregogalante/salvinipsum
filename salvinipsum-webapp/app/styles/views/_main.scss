@@ -1,0 +1,41 @@
+.main {
+
+  main {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-height: calc(100vh - 160px);
+  }
+
+  .guide {
+    text-align: left;
+    font-size: 18px;
+    font-weight: lighter;
+    border-left: solid 4px $color_primary;
+    padding: 15px;
+    background: $color_light;
+    margin-bottom: 30px;
+  }
+
+  .navigation {
+
+    .right {
+      float: right;
+    }
+
+    .fa {
+      position: relative;
+      top: -1px;
+    }
+
+  }
+
+}
+
+@include maxw(580px) {
+  .main {
+    .guide {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+}

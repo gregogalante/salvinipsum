@@ -1,0 +1,40 @@
+<%
+# Dichiaro blocco
+block = view(:block).new
+
+# Dichiaro searchbar
+searchbar = view(:searchbar).new(elements: @search_profiles,
+                                 url: lato_profiles_path,
+                                 filter: 'name_cont',
+                                 style: 'rounded',
+                                 remote: false)
+
+# Dichiaro actionbar
+actionbar = view(:actionbar).new(title: "Profili",
+                                 widgets: [[searchbar, "right"]],
+                                 links: [
+                                  ['Nuovo profilo', new_lato_profile_path]
+                                 ])
+
+# Dichiaro index
+index = view(:index).new(head: ['Nome', 'Chiave', 'Facebook id'],
+                        elements: @profiles,
+                        attributes: ['name', 'key', 'facebook_id'],
+                        link: lato_profiles_path,
+                        show_link: false,
+                        delete_link: false)
+%>
+
+
+
+<%=raw actionbar %>
+
+<div class="content-row">
+  <%=raw block.open %>
+
+    <%=raw index %>
+
+    <%= will_paginate @profiles,  previous_label: '←',  next_label: '→' %>
+
+  <%=raw block.close %>
+</div>

@@ -1,0 +1,33 @@
+<%= form_for [:lato, @phrase], method: method, html: { class: "lato-form", id: "new_phrase" } do |f| %>
+
+  <div class="form-group">
+
+    <%=raw view(:input).new(type: 'text',
+                         value: @phrase.content,
+                         name: 'phrase[content]',
+                         label: 'Contenuto frase',
+                         width: 'large',
+                         required: false) %>
+
+     <%=raw view(:input).new(type: 'select',
+                          value: @phrase.profile_id,
+                          name: 'phrase[profile_id]',
+                          label: 'Profilo di appartenenza',
+                          width: 'large',
+                          options: view(:input).generate_options_from_activerecords(@profiles, :id, :name),
+                          required: false) %>
+
+    <%=raw view(:input).new(type: 'radio',
+                         value: @phrase.checked,
+                         name: 'phrase[checked]',
+                         label: 'Correttezza',
+                         options: [[true, 'controllo eseguito'], [false, 'controllo non eseguito']],
+                         width: 'large',
+                         required: false) %>
+
+  </div>
+  <br>
+
+  <%= f.submit 'Salva', class: 'lato-button' %>
+
+<% end %>

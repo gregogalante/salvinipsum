@@ -1,0 +1,46 @@
+<%
+# Dichiaro blocco
+block = view(:block).new
+
+# Dichiaro actionbar
+actionbar = view(:actionbar).new(title: "Modifica profilo",
+                                links: [
+                                 ['Scarica da facebook', lato_update_feeds_path(@profile.id)]
+                                ])
+
+actionbar_list = view(:actionbar).new(title: "Frasi del profilo")
+
+# Dichiaro index
+index = view(:index).new(head: ['Frase'],
+                        elements: @phrases,
+                        attributes: ['print'],
+                        link: lato_phrases_path,
+                        show_link: false,
+                        delete_link: true)
+
+%>
+
+
+<%=raw actionbar %>
+
+<div class="content-row">
+  <%=raw block.open %>
+
+    <%= render 'lato/profiles/shared/form', method: :put %>
+
+    <%= link_to 'Elimina', lato_profile_path(@profile), method: :delete, style: 'display: block; text-align: right;' %>
+
+  <%=raw block.close %>
+</div>
+
+<%=raw actionbar_list %>
+
+<div class="content-row">
+  <%=raw block.open %>
+
+    <%=raw index %>
+
+    <%= will_paginate @phrases,  previous_label: '←',  next_label: '→' %>
+
+  <%=raw block.close %>
+</div>

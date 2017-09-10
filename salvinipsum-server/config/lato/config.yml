@@ -1,0 +1,49 @@
+# Set the application name
+
+app_name: Salvinipsum
+
+# Add custom voices to the sidebar
+
+menu:
+  dashboard:
+    name: Dashboard
+    url: "/lato/dashboard"
+    icon: home
+    position: 1
+    permission: 0
+  profiles:
+    name: Profili
+    url: "/lato/profiles"
+    icon: arrowright
+    position: 4
+    permission: 0
+  phrases:
+    name: Frasi
+    url: "/lato/phrases"
+    icon: arrowright
+    position: 3
+    permission: 0
+
+# Set languages used by the applications (if it has more languages)
+
+languages: it
+
+# Set application root url (default 'localhost')
+
+root_url: http://51.254.212.21:8200
+
+# Set the application service email
+
+service_email: gregogalante@gmail.com
+
+# Set custom page after login
+
+login_home: "/lato/dashboard"
+
+# Hide users with permission value to users with others permission value
+
+# hide_users: 1 to 2, 4 to 6
+
+# Set possibility to recover password to users
+
+recovery_password: true

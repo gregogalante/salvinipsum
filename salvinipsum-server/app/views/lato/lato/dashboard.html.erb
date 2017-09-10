@@ -1,0 +1,30 @@
+<%
+# Dichiaro blocco
+block = view(:block).new
+
+# Dichiaro actionbar
+actionbar = view(:actionbar).new(title: "Salvinipsum")
+
+%>
+
+<%=raw actionbar %>
+
+<div class="content-row">
+  <%=raw block.open %>
+
+    <div class="dashboard-profiles">
+    <% @profiles.each do |profile| %>
+      <div class="dashboard-profile">
+        <div class="dashboard-profile-picture" style="background-image: url(<%= profile.picture.url %>)"></div>
+        <b class="name"><%= profile.name %></b><a class="api" href="/api/ipsum/text/<%= profile.key %>/100" target="_blank">api/ipsum/text/<%= profile.key %>/100</a>
+      </div>
+    <% end %>
+    </div>
+
+  <%=raw block.close %>
+</div>
+
+<% # debug console %>
+<% if false && Rails.env.development? %>
+  <% console %>
+<% end %>

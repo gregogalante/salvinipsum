@@ -23,7 +23,7 @@ class Lato::LatoController < ApplicationController
   end
 
   protected def profile_params
-    params.require(:profile).permit(:name, :key, :facebook_id, :picture)
+    params.require(:profile).permit(:name, :key, :facebook_id, :picture_url)
   end
 
 end

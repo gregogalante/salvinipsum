@@ -9,10 +9,6 @@ class Profile < ActiveRecord::Base
   has_many :paragraphs, :dependent => :destroy
   has_many :phrases, :dependent => :destroy
 
-  # paperclip columns
-  has_attached_file :picture, styles: { medium: "600x600>", thumb: "300x300>" }, default_url: "/profile.png"
-  validates_attachment_content_type :picture, content_type: /\Aimage\/.*\Z/
-
   # funzione che esegue la sincronizzazione con i dati di fb
   def feeds
     oauth = Koala::Facebook::OAuth.new(APP_ID, APP_SECRET)

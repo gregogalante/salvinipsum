@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160720221412) do
+ActiveRecord::Schema.define(version: 20170910113049) do
 
   create_table "lato_core_superusers", force: :cascade do |t|
     t.string   "name"
@@ -46,12 +46,9 @@ ActiveRecord::Schema.define(version: 20160720221412) do
     t.string   "name"
     t.string   "key"
     t.string   "facebook_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.string   "picture_file_name"
-    t.string   "picture_content_type"
-    t.integer  "picture_file_size"
-    t.datetime "picture_updated_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "picture_url"
   end
 
 end

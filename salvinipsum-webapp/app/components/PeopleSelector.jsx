@@ -17,7 +17,7 @@ class PeopleSelector extends React.Component {
       return (
         <div className={componentClass}>
           {this.props.people.map((person, key) => {
-            const style = {backgroundImage: 'url(' + person.picture + ')'}
+            const style = {backgroundImage: 'url(' + person.picture_url + ')'}
             const singleClass = classNames(
               'person',
               {'active': person.selected}

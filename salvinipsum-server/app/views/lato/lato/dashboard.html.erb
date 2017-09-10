@@ -15,7 +15,7 @@ actionbar = view(:actionbar).new(title: "Salvinipsum")
     <div class="dashboard-profiles">
     <% @profiles.each do |profile| %>
       <div class="dashboard-profile">
-        <div class="dashboard-profile-picture" style="background-image: url(<%= profile.picture.url %>)"></div>
+        <div class="dashboard-profile-picture" style="background-image: url(<%= profile.picture_url %>)"></div>
         <b class="name"><%= profile.name %></b><a class="api" href="/api/ipsum/text/<%= profile.key %>/100" target="_blank">api/ipsum/text/<%= profile.key %>/100</a>
       </div>
     <% end %>

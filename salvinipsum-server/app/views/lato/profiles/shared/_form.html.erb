@@ -24,30 +24,15 @@
                          value: @profile.facebook_id,
                          name: 'profile[facebook_id]',
                          label: 'Id pagina facebook',
-                         width: 'large',
+                         width: 'half',
                          required: true) %>
 
-  </div>
-
-  <br>
-  <div class="form-group profile-picture">
-
-    <h2 class="form-section-title">Gestione immagine del profilo</h2>
-
-    <%=raw view(:input).new(type: 'file',
-                         value: @profile.picture,
-                         name: 'profile[picture]',
-                         label: 'Immagine profilo',
+    <%=raw view(:input).new(type: 'text',
+                         value: @profile.picture_url,
+                         name: 'profile[picture_url]',
+                         label: 'Url immagine profilo',
                          width: 'half',
-                         required: false,
-                         custom_class: 'profile-picture-input') %>
-
-    <div class="profile-picture-content">
-      <img src="<%= @profile.picture.url(:medium) %>" alt="">
-      <% if @profile.picture_content_type %>
-        <%= link_to 'elimina immagine', lato_delete_profile_picture_path(@profile.id), method: :delete, class: 'lato-button button-red' %>
-      <% end %>
-    </div>
+                         required: false) %>
 
   </div>
   <br>

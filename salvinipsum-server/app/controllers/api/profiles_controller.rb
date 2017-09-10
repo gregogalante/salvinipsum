@@ -5,7 +5,7 @@ class Api::ProfilesController < Api::ApiController
     profiles = Profile.all
     response = []
     profiles.each do |profile|
-      response.push(JSON::parse(profile.to_json).merge(picture: attachment_url(profile.picture)))
+      response.push(JSON.parse(profile.to_json))
     end
     render json: response
   end
@@ -13,7 +13,7 @@ class Api::ProfilesController < Api::ApiController
   def single
     profile = Profile.find(params[:id])
     render json: {error: 'profile id not valid'}, status: 400 and return false unless profile
-    response = JSON::parse(profile.to_json).merge(picture: attachment_url(profile.picture))
+    response = JSON.parse(profile.to_json)
     render json: response
   end
 

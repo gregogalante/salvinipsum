@@ -55,7 +55,7 @@ class Generation extends React.Component {
                   <span className="button">Copia testo</span>
                 </CopyToClipboard>
               </div>
-              <FacebookShareButton url={'http://51.254.212.21:8201/'} title={'Salvinipsum - generatore di post populisti'}
+              <FacebookShareButton url={'http://gregoriogalante.com/salvinipsum'} title={'Salvinipsum - generatore di post di successo'}
                                    description={this.props.store.post} className='facebook'>
                 <FacebookIcon size={32} round />
               </FacebookShareButton>

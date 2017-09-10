@@ -21,10 +21,10 @@ class Footer extends React.Component {
       <footer className={componentClass}>
         <div className='container'>
           <div className='credits'>
-            Made with <i className='fa fa-heart' aria-hidden='true'></i> ciao
+            Made with <i className='fa fa-heart' aria-hidden='true'></i> to laugh
           </div>
           <div className='links'>
-            <a href="http://51.254.212.21:8200/">Amministrazione</a>
+            {/*<a href="">Amministrazione</a>*/}
           </div>
         </div>
       </footer>

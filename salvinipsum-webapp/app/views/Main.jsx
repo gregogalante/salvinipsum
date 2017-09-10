@@ -16,7 +16,7 @@ class Main extends React.Component {
       length: 50,
       post: null,
       currentView: 'people',
-      apiRoot: 'http://51.254.212.21:8200/api'
+      apiRoot: 'https://salvinipsum-server.herokuapp.com/api'
     }
 
     // bind actions
@@ -85,7 +85,7 @@ class Main extends React.Component {
       length: 50,
       post: null,
       currentView: 'people',
-      apiRoot: 'http://51.254.212.21:8200/api'
+      apiRoot: 'https://salvinipsum-server.herokuapp.com/api'
     })
   }
 

@@ -23,9 +23,6 @@ gem 'koala', '~> 2.2'
 # cron jobs
 gem 'whenever'
 
-# Image uploader
-gem 'paperclip'
-
 # Lato gems
 gem 'lato_core', git: 'https://github.com/LatoTeam/lato_core.git'
 gem 'lato_view', git: 'https://github.com/LatoTeam/lato_view.git'

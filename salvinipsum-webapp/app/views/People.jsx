@@ -24,7 +24,7 @@ class People extends React.Component {
       <main className={componentClass}>
         <div className='container'>
           <div className='guide'>
-            Salvinipsum è un generatore di post utilizzabili gratuitamente per ottenere visibilità e successo nel mondo dei social.<br />
+            Salvinipsum è un generatore di post utilizzabili gratuitamente per ottenere visibilità e successo nel mondo dei social.
             Per iniziare seleziona uno o più personaggi da utilizzare come ispirazione per i tuoi post.
           </div>
 

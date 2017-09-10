@@ -21,10 +21,10 @@ class Footer extends React.Component {
       <footer className={componentClass}>
         <div className='container'>
           <div className='credits'>
-            Made with <i className='fa fa-heart' aria-hidden='true'></i> to laugh
+            Made with <i className='fa fa-heart' aria-hidden='true'></i> just to laugh :D
           </div>
           <div className='links'>
-            {/*<a href="">Amministrazione</a>*/}
+            <a href="https://github.com/gregogalante/salvinipsum" target="_blank">Source code</a>
           </div>
         </div>
       </footer>

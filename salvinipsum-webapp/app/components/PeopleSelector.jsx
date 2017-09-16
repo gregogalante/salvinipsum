@@ -13,7 +13,7 @@ class PeopleSelector extends React.Component {
       'peopleSelector'
     )
 
-    if(this.props.people != null) {
+    if (this.props.people != null && !this.props.isLoading) {
       return (
         <div className={componentClass}>
           {this.props.people.map((person, key) => {
@@ -30,9 +30,21 @@ class PeopleSelector extends React.Component {
           })}
         </div>
       )
+    } else if (this.props.isLoading) {
+      return (
+        <div className={componentClass}>
+          <div className='loading'>
+            Sto caricando i profili, se ci metto tanto è perchè il mio programmatore usa un server economico...
+          </div>
+        </div>
+      )
     } else {
       return (
-        <div className={componentClass}></div>
+        <div className={componentClass}>
+          <div className='message'>
+            Non ci sono profili disponibili :(
+          </div>
+        </div>
       )
     }
   }

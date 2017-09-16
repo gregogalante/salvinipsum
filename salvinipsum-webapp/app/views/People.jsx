@@ -28,11 +28,12 @@ class People extends React.Component {
             Per iniziare seleziona uno o più personaggi da utilizzare come ispirazione per i tuoi post.
           </div>
 
-          <PeopleSelector people={this.props.store.people} sendSelection={this.receiveSelection.bind(this)} />
+          <PeopleSelector people={this.props.store.people} isLoading={this.props.store.loadingPeople} sendSelection={this.receiveSelection.bind(this)} />
 
           <div className='navigation'>
             <Link className='button right' to={`/length`}>Prosegui <i className='fa fa-arrow-right' aria-hidden='true'></i></Link>
           </div>
+
         </div>
       </main>
     )

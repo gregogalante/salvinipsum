@@ -42,6 +42,35 @@
     line-height: 250px;
     transition: bottom 0.25s linear 0.25s, color 0.25s;
   }
+
+  .loading {
+    margin-top: 40px;
+    padding-top: 80px;
+    margin-bottom: 80px;
+    text-align: center;
+    position: relative;
+    
+    &:before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: solid 5px $color_light;
+      position: absolute;
+      top: 0;
+      left: calc(50% - 20px);
+      animation: loadingRotation 1s infinite;
+    }
+  }
+
+  .message {
+    margin-top: 40px;
+    padding-top: 80px;
+    margin-bottom: 80px;
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+  }
 }
 
 @include maxw(991px) {
@@ -58,4 +87,9 @@
       @include col(1, $uncycle: 2, $cycle: 1);
     }
   }
+}
+
+@keyframes loadingRotation {
+	0% { transform: rotate(0); }
+	100% { transform: rotate(180deg); }
 }

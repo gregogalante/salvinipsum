@@ -12,6 +12,7 @@ class Main extends React.Component {
     super(props)
 
     this.state = {
+      loadingPeople: false,
       people: null,
       length: 50,
       post: null,
@@ -92,15 +93,19 @@ class Main extends React.Component {
   // Richiede la lista dei profili supportati e la memorizza come stato
   getPeople () {
     const main = this
+    main.setState({ loadingPeople: true })
+
     axios.get(main.state.apiRoot + '/profiles/all')
       .then(function (response) {
-        main.setState ({
-          people: main.generatePeopleList(response.data)
+        main.setState({
+          people: main.generatePeopleList(response.data),
+          loadingPeople: false
         })
       })
       .catch(function (error) {
-        console.log(error);
-      });
+        console.log(error)
+        main.setState({ loadingPeople: false })
+      })
   }
 
   // Richiede un post rispetto ai dati memorizzati come stato

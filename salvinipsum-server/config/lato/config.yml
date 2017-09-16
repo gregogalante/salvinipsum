@@ -46,4 +46,4 @@ login_home: "/lato/dashboard"
 
 # Set possibility to recover password to users
 
-recovery_password: true
+recovery_password: false

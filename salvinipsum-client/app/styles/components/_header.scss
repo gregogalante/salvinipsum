@@ -1,0 +1,58 @@
+.header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0; left: 0;
+  padding: 10px;
+
+  .logo {
+    height: 60px;
+    width: auto;
+    float: left;
+    display: inline-block;
+
+    svg {
+      width: auto;
+      height: 100%;
+
+      path {fill: $color_light;}
+    }
+  }
+
+  .story {
+    @include listToOneLine;
+    display: inline-block;
+    float: right;
+    padding-top: 17px;
+
+    li {
+      color: rgba($color_light, 0.5);
+      margin-right: 30px;
+      font-weight: lighter;
+
+      &.active {
+        color: $color_light;
+      }
+    }
+  }
+}
+
+@include maxw(991px) {
+  .header {
+    .story {
+      padding-top: 24px;
+      li {
+        font-size: 14px;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+@include maxw(767px) {
+  .header {
+    .story {
+      display: none;
+    }
+  }
+}

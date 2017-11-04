@@ -1,0 +1,60 @@
+.generation {
+
+  .post {
+    background: $color_light;
+    border: solid 2px $color_primary;
+    padding: 15px;
+    margin-bottom: 30px;
+    min-height: 200px;
+  }
+
+  .icon {
+    float: left;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    border-radius: 50%;
+    background: $color_primary;
+  }
+
+  .content {
+    margin: 20px 20px;
+    display: inline-block;
+    width: calc(100% - 200px);
+    font-weight: lighter;
+    line-height: 1.2em;
+    color: rgba($color_black, 0.5);
+  }
+
+  .facebook {
+    display: inline-block;
+    margin-top: 30px;
+    cursor: pointer;
+    width: 30px;
+  }
+}
+
+.copy-button {
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  padding-right: 30px;
+  .button {
+    font-size: 14px;
+  }
+}
+
+@include maxw(768px) {
+  .generation {
+
+    .icon {
+      display: none;
+    }
+
+    .content {
+      margin: 10px 10px;
+      width: calc(100% - 20px);
+    }
+  }
+}

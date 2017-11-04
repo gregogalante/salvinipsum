@@ -1,0 +1,45 @@
+.footer {
+  padding: 30px;
+
+  .credits {
+    display: inline-block;
+    color: $color_white;
+    font-weight: lighter;
+    font-size: 14px;
+    text-align: left;
+    max-width: 70%;
+
+    a {
+      color: $color_dark;
+      background: $color_white;
+      text-decoration: none;
+      display: inline-block;
+      padding: 2.5px 5px;
+    }
+  }
+
+  .links {
+    float: right;
+    color: $color_white;
+    font-weight: lighter;
+    font-size: 14px;
+
+    a {
+      color: $color_light;
+    }
+  }
+}
+
+@include maxw(768px) {
+  .footer {
+
+    .credits {
+      display: block;
+      max-width: 100%;
+    }
+
+    .links {
+      display: none;
+    }
+  }
+}

@@ -14,8 +14,8 @@ Every endpoint has this structure:
 https://salvinipsum-server.herokuapp.com/api/ipsum/text/USER_KEY/POST_LENGTH
 ```
 
-- USER_KEY: The key used to select a persion (salvini, morandi, mentana ecc.). You can select multiple users using a dash char between the user keys (for example "salvini-morandi").
-- POST_LENGTH: The number of words for the post.
+- **USER_KEY**: The key used to select a persion (salvini, morandi, mentana ecc.). You can select multiple users using a dash char between the user keys (for example "salvini-morandi").
+- **POST_LENGTH**: The number of words for the post.
 
 An endpoint example is:
 

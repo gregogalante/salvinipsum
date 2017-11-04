@@ -4,7 +4,7 @@ Trash random facebook posts generator.
 
 Try the user interface here: https://salvinipsum-client.herokuapp.com
 
-Try the api here: https://salvinipsum-server.herokuapp.com
+Try the server api here: https://salvinipsum-server.herokuapp.com
 
 ## Api
 

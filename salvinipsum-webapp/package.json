@@ -20,6 +20,7 @@
   "dependencies": {
     "axios": "^0.13.1",
     "classnames": "^2.2.5",
+    "express": "^4.16.2",
     "history": "^3.2.1",
     "raw-loader": "^0.5.1",
     "react": "^0.14.3",
@@ -30,7 +31,8 @@
     "react-svg-inline": "^1.2.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --content-base dist/",
+    "start": "node index.js",
+    "start:dev": "webpack-dev-server --content-base dist/",
     "build": "webpack -p"
   },
   "author": "Gregorio Galante",

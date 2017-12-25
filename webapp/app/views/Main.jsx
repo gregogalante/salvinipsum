@@ -17,7 +17,7 @@ class Main extends React.Component {
       length: 50,
       post: null,
       currentView: 'people',
-      apiRoot: 'https://salvinipsum-server.herokuapp.com/api'
+      apiRoot: window.location.href + '/api'
     }
 
     // bind actions

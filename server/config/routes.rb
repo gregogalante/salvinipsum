@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  root 'lato/lato#dashboard'
+  root 'application#index'
+
   get 'login', to: 'lato/lato#dashboard', as: 'login'
 
   # Admin routes

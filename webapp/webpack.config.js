@@ -1,6 +1,6 @@
 var path = require('path')
 
-var BUILD_DIR = path.resolve(__dirname, 'dist')
+var BUILD_DIR = path.resolve(__dirname, '../server/public')
 var APP_DIR = path.resolve(__dirname, 'app')
 
 var config = {

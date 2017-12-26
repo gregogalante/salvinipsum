@@ -2,16 +2,14 @@
 
 Trash random facebook posts generator.
 
-Try the user interface here: https://salvinipsum-client.herokuapp.com
-
-Try the server api here: https://salvinipsum-server.herokuapp.com
+Try the user interface here: https://salvinipsum.herokuapp.com
 
 ## Api
 
 Every endpoint has this structure:
 
 ```text
-https://salvinipsum-server.herokuapp.com/api/ipsum/text/USER_KEY/POST_LENGTH
+https://salvinipsum.herokuapp.com/api/ipsum/text/USER_KEY/POST_LENGTH
 ```
 
 - **USER_KEY**: The key used to select a persion (salvini, morandi, mentana ecc.). You can select multiple users using a dash char between the user keys (for example "salvini-morandi").
@@ -20,12 +18,14 @@ https://salvinipsum-server.herokuapp.com/api/ipsum/text/USER_KEY/POST_LENGTH
 An endpoint example is:
 
 ```text
-https://salvinipsum-server.herokuapp.com/api/ipsum/text/salvini/100
+https://salvinipsum.herokuapp.com/api/ipsum/text/salvini/100
 ```
 
-## Server
+## Development
 
-Ruby on Rails application, API requests to Facebook developed using Koala gem, admin panel developed using Lato gem.
+### Server
+
+Ruby on Rails application, API requests to Facebook developed using Koala gem, admin panel developed using Lato gem, compiled code of the web app.
 
 To start the server run:
 
@@ -39,7 +39,7 @@ rails s
 
 ```
 
-## Client
+### Webapp
 
 React.js application, API requests to server developed with Axios, assets compiled with Webpack.
 
@@ -53,7 +53,7 @@ npm run start:dev
 
 ```
 
-To compile the client run:
+To compile the client and copy it on server public path run:
 
 ```console
 

@@ -1,0 +1,20 @@
+<%
+# Dichiaro blocco
+block = view(:block).new
+
+# Dichiaro actionbar
+actionbar = view(:actionbar).new(title: "Nuovo profilo")
+
+%>
+
+
+
+<%=raw actionbar %>
+
+<div class="content-row">
+  <%=raw block.open %>
+
+    <%= render 'lato/profiles/shared/form', method: :post %>
+
+  <%=raw block.close %>
+</div>

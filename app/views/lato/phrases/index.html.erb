@@ -1,0 +1,46 @@
+<%
+# Dichiaro blocco
+block = view(:block).new
+
+# Dichiaro searchbar
+searchbar = view(:searchbar).new(elements: @search_phrases,
+                                 url: lato_phrases_path,
+                                 filter: 'content_cont',
+                                 style: 'rounded',
+                                 remote: false)
+
+# Dichiaro actionbar
+page = params[:page]
+page = 1 unless params[:page]
+actionbar = view(:actionbar).new(title: "Frasi",
+                                 widgets: [[searchbar, "right"]],
+                                 links: [
+                                   ['Imposta pagina come controllata', lato_check_phrases_page_path(page)]
+                                 ])
+
+# Dichiaro index
+index = view(:index).new(head: ['Frase', 'Controllo'],
+                        elements: @phrases,
+                        attributes: ['print', 'checked'],
+                        link: lato_phrases_path,
+                        show_link: false,
+                        delete_link: true)
+%>
+
+
+
+<%=raw actionbar %>
+
+<div class="content-row">
+  <%=raw block.open %>
+
+    <%=raw index %>
+
+    <%= will_paginate @phrases,  previous_label: '←',  next_label: '→' %>
+
+  <%=raw block.close %>
+
+  <%= raw block.open %>
+    <%= link_to 'Elimina tutte le frasi senza check', lato_destroy_not_checked_phrases_path, class: 'lato-button' %>
+  <%=raw block.close %>
+</div>

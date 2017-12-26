@@ -1,0 +1,19 @@
+# Assets informations
+# -----------------------------------------------------------------------------
+
+# Add custom assets to the layout
+
+assets:
+  style:
+    name: lato
+    type: css
+#   code:
+#     name: application
+#     type: js
+
+# Template informations
+# -----------------------------------------------------------------------------
+
+# Set current template
+
+template: black

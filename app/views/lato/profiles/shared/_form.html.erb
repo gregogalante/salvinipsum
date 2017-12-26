@@ -1,0 +1,42 @@
+<%= form_for [:lato, @profile], method: method, html: { class: "lato-form", id: "new_profile", multipart: true } do |f| %>
+
+  <div class="form-group">
+
+    <%=raw view(:input).new(type: 'text',
+                         value: @profile.name,
+                         name: 'profile[name]',
+                         label: 'Nome profilo',
+                         width: 'half',
+                         required: true) %>
+
+   <%=raw view(:input).new(type: 'text',
+                        value: @profile.key,
+                        name: 'profile[key]',
+                        label: 'Chiave univoca',
+                        width: 'half',
+                        required: true) %>
+
+  </div>
+
+  <div class="form-group">
+
+    <%=raw view(:input).new(type: 'text',
+                         value: @profile.facebook_id,
+                         name: 'profile[facebook_id]',
+                         label: 'Id pagina facebook',
+                         width: 'half',
+                         required: true) %>
+
+    <%=raw view(:input).new(type: 'text',
+                         value: @profile.picture_url,
+                         name: 'profile[picture_url]',
+                         label: 'Url immagine profilo',
+                         width: 'half',
+                         required: false) %>
+
+  </div>
+  <br>
+
+  <%= f.submit 'Salva', class: 'lato-button' %>
+
+<% end %>

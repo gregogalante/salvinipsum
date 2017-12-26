@@ -1,0 +1,45 @@
+// Profiles page
+
+.profile-picture {
+
+  .form-control {
+    margin: 0;
+    float: left;
+  }
+
+  .profile-picture-content {
+    width: 48%;
+    float: right;
+    text-align: right;
+
+    img {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// Dashboard page
+
+.dashboard-profiles {
+
+  .dashboard-profile {
+    width: 33%;
+    display: inline-block;
+    float: left;
+    padding: 10px;
+    text-align: center;
+
+    .name {
+      margin-top: 10px;
+      display: block;
+    }
+  }
+
+  .dashboard-profile-picture {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

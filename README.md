@@ -49,7 +49,7 @@ To start the client run:
 
 npm install
 
-npm run start:dev
+npm run start
 
 ```
 

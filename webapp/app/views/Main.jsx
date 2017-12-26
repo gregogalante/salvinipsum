@@ -17,7 +17,7 @@ class Main extends React.Component {
       length: 50,
       post: null,
       currentView: 'people',
-      apiRoot: window.location.href + '/api'
+      apiRoot: 'https://salvinipsum.herokuapp.com/api'
     }
 
     // bind actions
@@ -86,7 +86,7 @@ class Main extends React.Component {
       length: 50,
       post: null,
       currentView: 'people',
-      apiRoot: 'https://salvinipsum-server.herokuapp.com/api'
+      apiRoot: 'https://salvinipsum.herokuapp.com/api'
     })
   }
 
@@ -127,6 +127,7 @@ class Main extends React.Component {
         const main = this
         axios.get(main.state.apiRoot + '/ipsum/text/'+keys+'/'+main.state.length)
           .then(function (response) {
+            console.log(response)
             main.setState ({
               post: response.data
             })

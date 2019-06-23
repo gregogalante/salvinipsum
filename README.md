@@ -2,14 +2,12 @@
 
 Trash random facebook posts generator.
 
-Try the user interface here: https://salvinipsum.herokuapp.com
-
 ## Api
 
 Every endpoint has this structure:
 
 ```text
-https://salvinipsum.herokuapp.com/api/ipsum/text/USER_KEY/POST_LENGTH
+https://HOST/api/ipsum/text/USER_KEY/POST_LENGTH
 ```
 
 - **USER_KEY**: The key used to select a persion (salvini, morandi, mentana ecc.). You can select multiple users using a dash char between the user keys (for example "salvini-morandi").
@@ -18,7 +16,7 @@ https://salvinipsum.herokuapp.com/api/ipsum/text/USER_KEY/POST_LENGTH
 An endpoint example is:
 
 ```text
-https://salvinipsum.herokuapp.com/api/ipsum/text/salvini/100
+https://HOST/api/ipsum/text/salvini/100
 ```
 
 ## Development

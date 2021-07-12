@@ -62,7 +62,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.4.0)
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     arel (7.1.1)
     autoprefixer-rails (6.4.1)
       execjs
@@ -142,6 +143,7 @@ GEM
     pkg-config (1.1.7)
     polyamorous (1.3.1)
       activerecord (>= 3.0)
+    public_suffix (4.0.6)
     puma (3.6.0)
     rack (2.0.1)
     rack-test (0.6.3)
